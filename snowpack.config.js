@@ -2,7 +2,9 @@
 module.exports = {
   mount: {
     public: { url: '/', static: true },
-    src: { url: '/src' },
+    'src/js': { url: '/src/js' },
+    'src/scss': { url: '/src/css' },
+    'src/html/page': { url: '/' },
   },
   plugins: [
     [
@@ -19,6 +21,7 @@ module.exports = {
         },
       },
     ],
+    ['snowpack-plugin-posthtml'],
     ['@snowpack/plugin-run-script', {
       cmd: 'eslint src --ext .js,jsx,.ts,.tsx',
       // Optional: Use npm package "eslint-watch" to run on every file change
@@ -38,5 +41,6 @@ module.exports = {
   devOptions: {
   },
   buildOptions: {
+    sourcemap: true,
   },
 };

@@ -1,9 +1,8 @@
 import 'regenerator-runtime/runtime';
-import './style.scss';
 import 'whatwg-fetch';
-import { helloWorld } from '../modules/hello-world';
+import { utils } from '../modules/utils';
 
-helloWorld();
+utils();
 
 async function start() {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');

@@ -1,25 +1,25 @@
-module.exports = function (api) {
-  api.cache(true)
+module.exports = (api) => {
+  api.cache(true);
 
   // preset
   const presets = [
     [
-      "@babel/preset-env",
+      '@babel/preset-env',
       {
-        "useBuiltIns": "entry",
-        "targets": {
-          "ie": "11",
+        useBuiltIns: 'entry',
+        targets: {
+          ie: '11',
         },
-        "corejs": 3
-      }
-    ]
-  ]
+        corejs: 3,
+      },
+    ],
+  ];
 
   // plugins
-  const plugins = []
+  const plugins = [];
 
   return {
     presets,
-    plugins
-  }
-}
+    plugins,
+  };
+};
